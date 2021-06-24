@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Chat.css'
-import { Avatar } from '@material-ui/core'
+import { Avatar, IconButton } from '@material-ui/core'
+import { AttachFile, MoreVert, SearchOutlined, InsertEmoticon } from '@material-ui/icons'
 
 const Chat = () => {
     // to make the seed dynamic/random
@@ -17,6 +18,17 @@ const Chat = () => {
                 <div className="chat__headerInfo">
                     <h2>Room name</h2>
                     <p>last seen at...</p>
+                </div>
+                <div className="Chat__headerRight"  >
+                    <IconButton>
+                        <SearchOutlined />
+                    </IconButton>
+                    <IconButton>
+                        <AttachFile />
+                    </IconButton>
+                    <IconButton>
+                        <MoreVert />
+                    </IconButton>
                 </div>
             </div>
             <div className="chat__body" ></div>
